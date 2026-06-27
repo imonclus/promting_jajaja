@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Kit de IA para Profesionales | Framework RICO
+  </title>
+  <link href="data:image/svg+xml,&lt;svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22&gt;&lt;text y=%22.9em%22 font-size=%2290%22&gt;🚀&lt;/text&gt;&lt;/svg&gt;" rel="icon"/>
+  <link href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%23584ec8'/%3E%3Cstop offset='100%25' style='stop-color:%237c6fd9'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath fill='url(%23g)' d='M20,85 L25,80 L30,85 L35,80 L40,85 L45,80 L50,85 L50,50 L45,45 L40,50 L35,45 L30,50 L25,45 L20,50 Z'/%3E%3Cpath fill='url(%23g)' d='M50,50 L55,45 Q70,30 75,15 L70,10 Q50,25 45,45 Z'/%3E%3Ccircle fill='url(%23g)' cx='77' cy='12' r='8'/%3E%3C/svg%3E" rel="icon" type="image/svg+xml"/>
+  <link href="styles.css" rel="stylesheet"/>
+  <script src="data.js">
+  </script>
+ </head>
+ <body>
+  <div class="container">
+   <nav class="tab-navigation">
+    <button class="tab-btn active" onclick="switchTab('practicas')">
+     Mejores Prácticas
+    </button>
+    <button class="tab-btn" onclick="switchTab('rico')">
+     Framework RICO
+    </button>
+    <button class="tab-btn" onclick="switchTab('gpts')">
+     GPTs Premium
+    </button>
+    <button class="tab-btn" onclick="switchTab('prompts')">
+     Prompts Profesionales
+    </button>
+    <button class="tab-btn" onclick="switchTab('misprompts')">
+     Mis Prompts
+    </button>
+    <button class="tab-btn" onclick="switchTab('diccionario')">
+     Diccionario IA 2026
+    </button>
+   </nav>
+   <!-- TAB: Diccionario -->
+   <div class="tab-content active" id="tab-practicas">
+    <div class="section-card">
+     <h3>
+      10 Mejores Prácticas de Prompt Engineering 2026
+     </h3>
+     <p style="color: #ccc; margin-bottom: 2rem;">
+      Basadas en investigación de OpenAI, Anthropic, Google y profesionales del campo. Estas prácticas están probadas en entornos profesionales reales.
+     </p>
+     <div id="practicas-container" style="display: flex; flex-direction: column; gap: 1rem;">
+     </div>
+    </div>
+    <div class="section-card" style="margin-top: 2rem;">
+     <h3>
+      Anti-patrones Comunes a Evitar
+     </h3>
+     <div class="grid-3">
+      <div class="term-card">
+       <h4>
+        ❌ Prompts Demasiado Vagos
+       </h4>
+       <div class="definition">
+        "Hazlo mejor", "Sé creativo", "Make it pop" - el modelo no sabe qué significa esto para ti.
+       </div>
+      </div>
+      <div class="term-card">
+       <h4>
+        ❌ Múltiples Tareas en Un Prompt
+       </h4>
+       <div class="definition">
+        Pedir analizar + resumir + traducir + formatear en un solo prompt. Separa en pasos.
+       </div>
+      </div>
+      <div class="term-card">
+       <h4>
+        ❌ No Verificar Outputs
+       </h4>
+       <div class="definition">
+        Confiar ciegamente. Siempre revisa hechos, datos y lógica. Los modelos alucinan.
+       </div>
+      </div>
+      <div class="term-card">
+       <h4>
+        ❌ Copiar Prompts Sin Adaptar
+       </h4>
+       <div class="definition">
+        Los prompts "universales" de internet raramente funcionan para tu caso específico.
+       </div>
+      </div>
+      <div class="term-card">
+       <h4>
+        ❌ Ignorar el Context Window
+       </h4>
+       <div class="definition">
+        Cargar documentos masivos sin resumen previo. Usa embeddings o chunking estratégico.
+       </div>
+      </div>
+      <div class="term-card">
+       <h4>
+        ❌ No Documentar Prompts Exitosos
+       </h4>
+       <div class="definition">
+        Encontrar un prompt perfecto y no guardarlo. Crea una biblioteca personal.
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="tab-content" id="tab-rico">
+    <div class="section-card">
+     <h3>
+      Framework RICO
+     </h3>
+     <p style="color: #ccc; margin-bottom: 2rem;">
+      RICO es un framework estructurado para crear prompts profesionales consistentes. 
+                    Transforma peticiones vagas en instrucciones precisas que generan resultados predecibles y de alto impacto.
+     </p>
+     <div class="grid-2" id="rico-container" style="margin-bottom: 2rem;">
+     </div>
+    </div>
+    <!-- RICO + Banner -->
+    <div class="info-banner" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); border-color: #fbbf24; margin-bottom: 2rem;">
+     <h3 style="margin-bottom: 1rem;">
+      Framework R.I.C.O+ (Evolución Estratégica)
+     </h3>
+     <p style="margin-bottom: 1rem;">
+      <strong>
+       RICO+ es una evolución estratégica del framework básico RICO,
+      </strong>
+      diseñado para transformar peticiones vagas en instrucciones profesionales de alto impacto. La variante Plus (+) se enfoca en
+      <strong>
+       "pensar junto a la IA"
+      </strong>
+      , permitiendo que incluso personas que no dominan un tema obtengan resultados de nivel excepcional.
+     </p>
+    </div>
+    <!-- Metodología RICO+ -->
+    <div class="section-card" style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); border: 2px solid #6366f1; margin-bottom: 2rem;">
+     <h3 style="color: #fff; margin-bottom: 1.5rem;">
+      La Metodología: "Da un Paso Atrás para Tomar Impulso"
+     </h3>
+     <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px; margin-bottom: 1.5rem; border-left: 4px solid #fbbf24;">
+      <h4 style="color: #fbbf24; margin-bottom: 1rem;">
+       🎯 En lugar de lanzar una orden directa...
+      </h4>
+      <p style="color: #e9d5ff; line-height: 1.8;">
+       Realiza una
+       <strong>
+        investigación previa
+       </strong>
+       o pide a la IA que
+       <strong>
+        defina qué elementos convierten tu tarea específica en algo excepcional
+       </strong>
+       y orientado a resultados. Este proceso permite identificar el perfil profesional más adecuado para el caso y las estructuras de trabajo validadas por las mejores escuelas de negocios.
+      </p>
+     </div>
+     <div class="grid-2" style="margin-bottom: 1.5rem;">
+      <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px;">
+       <h4 style="color: #B3A0FF; margin-bottom: 1rem;">
+        SIN RICO+
+       </h4>
+       <p style="color: #ccc; font-size: 0.95rem; line-height: 1.6;">
+        "Crea una estrategia de marketing"
+        <br/>
+        <br/>
+        ➜ Resultado genérico
+        <br/>
+        ➜ Síndrome del impostor
+        <br/>
+        ➜ Contenido mediocre
+       </p>
+      </div>
+      <div style="background: rgba(34, 197, 94, 0.1); padding: 1.5rem; border-radius: 8px; border: 2px solid #22c55e;">
+       <h4 style="color: #22c55e; margin-bottom: 1rem;">
+        ✅ CON RICO+
+       </h4>
+       <p style="color: #ccc; font-size: 0.95rem; line-height: 1.6;">
+        1. "¿Qué hace excepcional una estrategia de marketing para SaaS B2B?"
+        <br/>
+        2. "¿Qué información necesitas para evitar errores?"
+        <br/>
+        3. → Creas RICO con criterios de excelencia
+        <br/>
+        <br/>
+        ➜ Resultado profesional de alto impacto
+       </p>
+      </div>
+     </div>
+    </div>
+    <!-- Proceso RICO+ en 4 Pasos -->
+    <div class="section-card" style="margin-bottom: 2rem;">
+     <h3 style="margin-bottom: 1.5rem;">
+      Proceso RICO+ en 4 Pasos
+     </h3>
+     <div class="grid-2">
+     </div>
+    </div>
+    <!-- Pilares Fundamentales RICO+ -->
+    <div class="section-card" style="background: linear-gradient(135deg, #1e1b4b 0%, #312e81 100%); border: 2px solid #B3A0FF; margin-bottom: 2rem;">
+     <h3 style="color: #fff; margin-bottom: 1.5rem;">
+      Los 4 Pilares Fundamentales de RICO+
+     </h3>
+     <div class="grid-2">
+      <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #f59e0b;">
+       <h4 style="color: #f59e0b; margin-bottom: 0.5rem;">
+        🎭 R - Rol
+       </h4>
+       <p style="color: #e9d5ff; font-size: 0.95rem;">
+        Asigna un papel profesional específico a la IA. En RICO+, este rol se identifica mediante la pregunta de excelencia.
+       </p>
+      </div>
+      <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #9B7EF8;">
+       <h4 style="color: #9B7EF8; margin-bottom: 0.5rem;">
+        📋 I - Instrucción
+       </h4>
+       <p style="color: #e9d5ff; font-size: 0.95rem;">
+        Define la tarea de forma directa y precisa, basada en los criterios de excelencia identificados.
+       </p>
+      </div>
+      <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #22c55e;">
+       <h4 style="color: #22c55e; margin-bottom: 0.5rem;">
+        📊 C - Contexto
+       </h4>
+       <p style="color: #e9d5ff; font-size: 0.95rem;">
+        <strong>
+         La piedra angular.
+        </strong>
+        Información verificada para que la IA no invente datos. Se completa con el refinamiento colaborativo.
+       </p>
+      </div>
+      <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px; border-left: 4px solid #06b6d4;">
+       <h4 style="color: #06b6d4; margin-bottom: 0.5rem;">
+        📄 O - Output
+       </h4>
+       <p style="color: #e9d5ff; font-size: 0.95rem;">
+        Especifica el formato de salida deseado según las mejores prácticas identificadas en el paso 1.
+       </p>
+      </div>
+     </div>
+    </div>
+    <!-- Potenciadores de RICO+ -->
+    <div class="section-card" style="margin-bottom: 2rem;">
+     <h3 style="margin-bottom: 1.5rem;">
+      Potenciadores de RICO+
+     </h3>
+     <div class="grid-2">
+     </div>
+    </div>
+    <!-- Valor Estratégico -->
+    <div class="info-banner" style="background: linear-gradient(135deg, #5B4EC8 0%, #8177D7 100%); border-color: #B3A0FF; margin-bottom: 2rem;">
+     <h3 style="margin-bottom: 1rem;">
+      Valor Estratégico de RICO+
+     </h3>
+     <div class="grid-2" style="gap: 1rem;">
+      <div>
+       <p style="color: #fff; margin-bottom: 0.5rem;">
+        <strong>
+         ✅ Evita la mediocridad
+        </strong>
+       </p>
+       <p style="color: #e9d5ff; font-size: 0.95rem;">
+        Al definir criterios de excelencia primero, te aseguras de trabajar con estándares profesionales validados.
+       </p>
+      </div>
+      <div>
+       <p style="color: #fff; margin-bottom: 0.5rem;">
+        <strong>
+         ✅ Elimina el síndrome del impostor
+        </strong>
+       </p>
+       <p style="color: #e9d5ff; font-size: 0.95rem;">
+        No necesitas ser especialista. La IA te enseña qué buscan los profesionales de élite.
+       </p>
+      </div>
+      <div>
+       <p style="color: #fff; margin-bottom: 0.5rem;">
+        <strong>
+         ✅ Previene alucinaciones
+        </strong>
+       </p>
+       <p style="color: #e9d5ff; font-size: 0.95rem;">
+        El refinamiento colaborativo identifica qué datos faltan antes de que la IA invente información.
+       </p>
+      </div>
+      <div>
+       <p style="color: #fff; margin-bottom: 0.5rem;">
+        <strong>
+         ✅ Te convierte en profesional más valioso
+        </strong>
+       </p>
+       <p style="color: #e9d5ff; font-size: 0.95rem;">
+        Usas la tecnología estratégicamente, poniendo distancia frente a la creación de contenido genérico.
+       </p>
+      </div>
+     </div>
+    </div>
+    <div class="section-card">
+     <h3>
+      Generador RICO Interactivo
+     </h3>
+     <p style="color: #ccc; margin-bottom: 1.5rem;">
+      Completa los campos y genera tu prompt profesional estructurado al instante.
+     </p>
+     <div class="rico-generator">
+      <div class="form-group">
+       <label>
+        🎭 ROL - ¿Quién debe ser el modelo?
+       </label>
+       <input id="rico-rol" placeholder="Ej: Eres un CFO con 15 años de experiencia en empresas SaaS B2B" type="text"/>
+      </div>
+      <div class="form-group">
+       <label>
+        📋 INSTRUCCIONES - ¿Qué debe hacer exactamente?
+       </label>
+       <textarea id="rico-instrucciones" placeholder="Ej: Analiza este P&amp;L trimestral, identifica las 3 áreas con mayor oportunidad de optimización y proporciona recomendaciones accionables"></textarea>
+      </div>
+      <div class="form-group">
+       <label>
+        📊 CONTEXTO - Información de fondo relevante
+       </label>
+       <textarea id="rico-contexto" placeholder="Ej: Empresa SaaS B2B, ARR $5M, 30 empleados, burn rate $150K/mes. Objetivo: extender runway 6 meses sin afectar crecimiento"></textarea>
+      </div>
+      <div class="form-group">
+       <label>
+        📄 OUTPUT - Formato deseado de la respuesta
+       </label>
+       <textarea id="rico-output" placeholder="Ej: Tabla con 3 columnas (Área | Ahorro estimado | Impacto en ops). Máximo 300 palabras total. Incluye números concretos"></textarea>
+      </div>
+      <button class="btn" onclick="generarPromptRICO()">
+       Generar Prompt RICO
+      </button>
+      <div class="output-box" id="rico-resultado" style="display: none;">
+       <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; flex-wrap: wrap; gap: 0.5rem;">
+        <strong style="color: #8177D7;">
+         Tu Prompt Profesional Generado:
+        </strong>
+        <div style="display: flex; gap: 0.5rem; flex-wrap: wrap;">
+         <button class="btn btn-secondary" onclick="copiarPromptRICO()" style="padding: 0.5rem 1rem;">
+          📋 Copiar
+         </button>
+         <button class="btn btn-secondary" onclick="abrirRICOEnChatGPT()" style="padding: 0.5rem 1rem;">
+          🤖 ChatGPT
+         </button>
+         <button class="btn btn-secondary" onclick="abrirRICOEnClaude()" style="padding: 0.5rem 1rem;">
+          💬 Claude
+         </button>
+         <button class="btn btn-secondary" onclick="abrirRICOEnCopilot()" style="padding: 0.5rem 1rem;">
+          🔷 Copilot
+         </button>
+        </div>
+       </div>
+       <div id="rico-output-text">
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="section-card" style="margin-top: 2rem;">
+     <h3>
+      Ejemplos RICO por Función Profesional
+     </h3>
+     <div class="prompt-card">
+      <h4>
+       📊 Dirección - Análisis Estratégico
+      </h4>
+      <span class="category-tag">
+       CEO / C-Level
+      </span>
+      <div class="prompt-text" id="ejemplo-direccion">
+       <strong>
+        ROL:
+       </strong>
+       Eres un CEO con 20 años liderando empresas B2B SaaS en crecimiento ($10M-$100M ARR).
+       <strong>
+        INSTRUCCIONES:
+       </strong>
+       Analiza nuestra posición competitiva actual y genera una matriz 2x2 (Ventaja Competitiva vs Urgencia Estratégica) con nuestras 8 iniciativas. Prioriza las top 3 para próximo trimestre.
+       <strong>
+        CONTEXTO:
+       </strong>
+       Empresa SaaS B2B, ARR $15M (+120% YoY), 45 empleados, levantamos Series A ($8M) hace 6 meses. Mercado: Marketing automation para e-commerce. Principales competidores: HubSpot, Klaviyo, ActiveCampaign.
+       <strong>
+        OUTPUT:
+       </strong>
+       1) Matriz visual 2x2 con las 8 iniciativas posicionadas. 2) Justificación de top 3 (max 100 palabras c/u). 3) Tabla de recursos necesarios (FTEs | Budget | Timeline). Total máximo 500 palabras.
+      </div>
+      <div class="prompt-actions">
+       <button class="btn" onclick="copiarEjemploRICO('ejemplo-direccion')">
+        📋 Copiar Prompt
+       </button>
+      </div>
+     </div>
+     <div class="prompt-card">
+      <h4>
+       💰 Ventas - Pipeline Analysis
+      </h4>
+      <span class="category-tag">
+       VP Sales / Revenue
+      </span>
+      <div class="prompt-text" id="ejemplo-ventas">
+       <strong>
+        ROL:
+       </strong>
+       Eres un VP de Ventas B2B Enterprise con 15 años cerrando deals de $100K-$1M+ en software empresarial.
+       <strong>
+        INSTRUCCIONES:
+       </strong>
+       Analiza este pipeline Q4, identifica deals en riesgo (&gt;30 días sin avance), segmenta por win probability, y proporciona tácticas específicas para acelerar cierre de los 5 deals más valiosos.
+       <strong>
+        CONTEXTO:
+       </strong>
+       Pipeline: 45 oportunidades, $8.5M total value. Ciclo de venta promedio: 90 días. Tenemos 6 semanas para Q4. Team: 1 AE senior, 2 AE mid-level. Ticket promedio histórico: $120K. Win rate: 28%.
+       <strong>
+        OUTPUT:
+       </strong>
+       Tabla con columnas: Deal | Value | Days in Stage | Risk Level | Specific Action | Owner. Separa en 3 categorías: Hot (close esta semana), Warm (cierre en 2-3 semanas), Cold (reactivar o descalificar). Máximo 400 palabras de análisis + tabla.
+      </div>
+      <div class="prompt-actions">
+       <button class="btn" onclick="copiarEjemploRICO('ejemplo-ventas')">
+        📋 Copiar Prompt
+       </button>
+      </div>
+     </div>
+     <div class="prompt-card">
+      <h4>
+       📢 Marketing - Campaign Strategy
+      </h4>
+      <span class="category-tag">
+       CMO / Growth
+      </span>
+      <div class="prompt-text" id="ejemplo-marketing">
+       <strong>
+        ROL:
+       </strong>
+       Eres una CMO con 12 años en growth marketing B2B, experta en paid acquisition y funnel optimization para SaaS.
+       <strong>
+        INSTRUCCIONES:
+       </strong>
+       Diseña estrategia de paid ads para Q1 con objetivo de generar 200 MQLs. Distribuye presupuesto entre canales (LinkedIn, Google, Facebook), define targeting, crea 3 variantes de messaging y establece KPIs por canal.
+       <strong>
+        CONTEXTO:
+       </strong>
+       Producto: CRM para real estate. ICP: Brokers/agencies 10-100 agentes. Ticket: $299/mes. LTV: $10,800. CAC permitido: $1,200. Budget total Q1: $60K. Conversión histórica: web visit → trial = 3.5%, trial → paid = 18%.
+       <strong>
+        OUTPUT:
+       </strong>
+       1) Tabla allocation por canal (% budget | Expected MQLs | CPL estimado). 2) 3 hooks/headlines por canal. 3) Targeting specifics c/canal. 4) KPIs semanales. Formato markdown, máximo 600 palabras.
+      </div>
+      <div class="prompt-actions">
+       <button class="btn" onclick="copiarEjemploRICO('ejemplo-marketing')">
+        📋 Copiar Prompt
+       </button>
+      </div>
+     </div>
+     <div class="prompt-card">
+      <h4>
+       ⚙️ Operaciones - Process Optimization
+      </h4>
+      <span class="category-tag">
+       COO / Operations
+      </span>
+      <div class="prompt-text" id="ejemplo-operaciones">
+       <strong>
+        ROL:
+       </strong>
+       Eres un COO con experiencia escalando operaciones en startups de 20 a 200+ empleados, especializado en automation y efficiency.
+       <strong>
+        INSTRUCCIONES:
+       </strong>
+       Audita nuestro proceso actual de onboarding de clientes, identifica los 5 bottlenecks principales, calcula tiempo/costo de cada uno, y propón stack de herramientas + workflow automatizado para reducir time-to-value 50%.
+       <strong>
+        CONTEXTO:
+       </strong>
+       Proceso actual: 12 pasos, 14 días promedio, involucra 4 equipos (Sales, Success, Product, Support). 80 nuevos clientes/mes. Cada día de delay = $450 en opportunity cost. Team mayormente manual (spreadsheets, emails). Budget automation: $15K setup + $3K/mes.
+       <strong>
+        OUTPUT:
+       </strong>
+       1) Diagrama flujo actual vs propuesto (texto). 2) Tabla de bottlenecks (Step | Current time | Cost | Root cause). 3) Stack recomendado (Tool | Use case | Cost | Integration effort). 4) ROI projection 12 meses. Max 700 palabras + tablas.
+      </div>
+      <div class="prompt-actions">
+       <button class="btn" onclick="copiarEjemploRICO('ejemplo-operaciones')">
+        📋 Copiar Prompt
+       </button>
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="tab-content" id="tab-gpts">
+    <div class="info-banner" style="background: linear-gradient(135deg, #10b981 0%, #059669 100%); border-color: #6ee7b7;">
+     <h3>
+      Custom GPTs Verificados
+     </h3>
+     <p>
+      <strong>
+       Herramientas especializadas de la GPT Store de OpenAI
+      </strong>
+      - Custom GPTs creados por profesionales y la comunidad que extienden las capacidades de ChatGPT para tareas específicas.
+     </p>
+     <p style="margin-top: 0.5rem; font-size: 0.95rem;">
+      <strong>
+       Acceso:
+      </strong>
+      Los GPTs públicos están disponibles para todos los usuarios de ChatGPT. La cuenta gratuita tiene acceso limitado a GPT-5 con restricciones de uso. ChatGPT Plus ($20/mes) ofrece acceso completo a GPT-5 y o1, con mayor disponibilidad y la capacidad de crear tus propios Custom GPTs.
+     </p>
+    </div>
+    <div class="section-card">
+     <h3>
+      Los Mejores Custom GPTs para Profesionales
+     </h3>
+     <!-- Banner de alerta sobre GPTs -->
+     <div class="info-banner" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); border-color: #fbbf24; margin-bottom: 2rem;">
+      <h4 style="color: #fff; margin-bottom: 0.5rem;">
+       ⚠️ Nota sobre disponibilidad
+      </h4>
+      <p style="font-size: 0.95rem;">
+       Los Custom GPTs pueden experimentar periodos de inactividad debido a actualizaciones internas de OpenAI o mantenimiento. Además, si el autor original elimina o modifica su GPT, este dejará de estar disponible. Si encuentras algún GPT inaccesible, es posible que haya sido actualizado o removido de la GPT Store.
+      </p>
+     </div>
+     <p style="color: #ccc; margin-bottom: 2rem;">
+      Estos GPTs han sido seleccionados por su utilidad real, popularidad en la GPT Store y relevancia para profesionales de alto impacto. Todos están disponibles oficialmente en
+      <a href="https://chatgpt.com/gpts" style="color: #8177D7;" target="_blank">
+       chatgpt.com/gpts
+      </a>
+     </p>
+     <!-- Banner de Alerta GPTs -->
+     <div class="info-banner" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); border-color: #fbbf24; margin-bottom: 2rem;">
+      <h4 style="margin-bottom: 0.5rem;">
+       ⚠️ Nota sobre Custom GPTs
+      </h4>
+      <p style="font-size: 0.95rem; line-height: 1.6;">
+       Los Custom GPTs pueden no estar disponibles temporalmente debido a actualizaciones internas de OpenAI o cambios en la GPT Store. Ocasionalmente, un GPT puede desaparecer si su autor decide eliminarlo. Si encuentras un enlace inactivo, te recomendamos buscar alternativas similares en
+       <a href="https://chatgpt.com/gpts" style="color: #fff; text-decoration: underline;" target="_blank">
+        chatgpt.com/gpts
+       </a>
+       .
+      </p>
+     </div>
+     <div class="grid-2" id="gpts-container">
+     </div>
+    </div>
+    <div class="section-card" style="margin-top: 2rem;">
+     <h3>
+      Cómo Usar Custom GPTs
+     </h3>
+     <div class="practice-card">
+      <h4>
+       Acceso en Tier Gratuito
+      </h4>
+      <p>
+       Los Custom GPTs públicos están disponibles para usuarios gratuitos de ChatGPT. Puedes acceder y usar GPTs creados por otros sin necesidad de suscripción ChatGPT Plus.
+      </p>
+      <p style="margin-top: 0.5rem;">
+       <strong>
+        Límites en tier gratuito:
+       </strong>
+      </p>
+      <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+       <li>
+        Comparten el límite de mensajes de GPT-5 (aproximadamente 10 mensajes cada 5 horas)
+       </li>
+       <li>
+        Herramientas avanzadas (análisis de datos, file uploads, DALL-E 3) tienen límites más estrictos
+       </li>
+       <li>
+        File uploads: máximo 3 archivos por 24 horas
+       </li>
+       <li>
+        DALL-E 3: 2-3 imágenes por día
+       </li>
+       <li>
+        No puedes crear tus propios GPTs (solo ChatGPT Plus, Team o Enterprise)
+       </li>
+      </ul>
+     </div>
+     <div class="practice-card">
+      <h4>
+       Acceder a la GPT Store
+      </h4>
+      <p>
+       Ve a
+       <a href="https://chatgpt.com/gpts" style="color: #8177D7;" target="_blank">
+        chatgpt.com/gpts
+       </a>
+       o haz clic en "Explore GPTs" en el menú lateral de ChatGPT. Puedes buscar por nombre o explorar por categorías (Writing, Productivity, Research, Programming, Education, Lifestyle).
+      </p>
+     </div>
+     <div class="practice-card">
+      <h4>
+       Iniciar Conversación
+      </h4>
+      <p>
+       Haz clic en el GPT que quieras usar y luego en "Start Chat". El GPT abrirá un chat nuevo con instrucciones especializadas y conocimiento pre-cargado para su tarea específica.
+      </p>
+     </div>
+     <div class="practice-card">
+      <h4>
+       Usar Prompts Específicos
+      </h4>
+      <p>
+       Aunque el GPT está especializado, sigue aplicando las mejores prácticas de prompting. Sé específico, proporciona contexto relevante y define claramente el output deseado. Los GPTs son más efectivos cuando reciben instrucciones claras.
+      </p>
+     </div>
+     <div class="practice-card">
+      <h4>
+       Combinar con el Framework RICO
+      </h4>
+      <p>
+       Usa los prompts profesionales de este kit dentro de los GPTs especializados. Por ejemplo: usa un prompt de "Content Strategy" en "Write For Me" o un prompt de "Research Analysis" en "ScholarAI" para resultados optimizados. El Framework RICO funciona perfectamente dentro de Custom GPTs.
+      </p>
+     </div>
+    </div>
+    <div class="info-banner" style="background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%); border-color: #fbbf24; margin-top: 2rem;">
+     <h3>
+      Crear Tus Propios GPTs
+     </h3>
+     <p>
+      <strong>
+       ¿Tienes un workflow específico que repites constantemente?
+      </strong>
+      Con ChatGPT Plus ($20/mes), Team ($25/usuario/mes con facturación anual) o Enterprise puedes crear tus propios Custom GPTs sin código. Usa el GPT Builder para diseñar un asistente personalizado con tus instrucciones, tono y conocimiento específico.
+     </p>
+     <p style="margin-top: 0.5rem;">
+      Crear GPTs te permite automatizar tareas repetitivas, mantener consistencia en outputs y compartir expertise con tu equipo. Es más fácil de lo que piensas y puede multiplicar significativamente tu productividad.
+     </p>
+    </div>
+   </div>
+   <div class="tab-content" id="tab-prompts">
+    <div class="section-card">
+     <h3>
+      Biblioteca de Prompts Profesionales
+     </h3>
+     <p style="color: #ccc; margin-bottom: 2rem;">
+      Prompts listos para usar, organizados por función profesional. Cópialos, personalízalos según tu contexto y obtén resultados inmediatos.
+     </p>
+     <div class="tab-navigation" style="margin-bottom: 2rem;">
+      <button class="tab-btn active" onclick="filterPrompts('all')">
+       Todos
+      </button>
+      <button class="tab-btn" onclick="filterPrompts('direccion')">
+       📊 Dirección
+      </button>
+      <button class="tab-btn" onclick="filterPrompts('ventas')">
+       💰 Ventas
+      </button>
+      <button class="tab-btn" onclick="filterPrompts('marketing')">
+       📢 Marketing
+      </button>
+      <button class="tab-btn" onclick="filterPrompts('operaciones')">
+       ⚙️ Operaciones
+      </button>
+      <button class="tab-btn" onclick="filterPrompts('producto')">
+       📦 Producto
+      </button>
+      <button class="tab-btn" onclick="filterPrompts('finanzas')">
+       💼 Finanzas
+      </button>
+      <button class="tab-btn" onclick="filterPrompts('rrhh')">
+       👥 RRHH
+      </button>
+     </div>
+     <div id="prompts-container">
+     </div>
+    </div>
+   </div>
+   <div class="tab-content" id="tab-misprompts">
+    <div class="section-card">
+     <h3>
+      Mis Prompts Guardados
+     </h3>
+     <p style="color: #ccc; margin-bottom: 2rem;">
+      Crea y gestiona tu biblioteca personal de prompts. Todo se guarda automáticamente en tu navegador y persiste entre sesiones.
+     </p>
+     <div class="rico-generator" style="margin-bottom: 2rem;">
+      <h4 style="color: #c4b5fd; margin-bottom: 1rem;">
+       ➕ Agregar Nuevo Prompt
+      </h4>
+      <div class="form-group">
+       <label>
+        Título del Prompt
+       </label>
+       <input id="new-prompt-title" placeholder="Ej: Análisis Competitivo Q4" type="text"/>
+      </div>
+      <div class="form-group">
+       <label>
+        Categoría
+       </label>
+       <select id="new-prompt-category">
+        <option value="direccion">
+         📊 Dirección
+        </option>
+        <option value="ventas">
+         💰 Ventas
+        </option>
+        <option value="marketing">
+         📢 Marketing
+        </option>
+        <option value="operaciones">
+         ⚙️ Operaciones
+        </option>
+        <option value="producto">
+         📦 Producto
+        </option>
+        <option value="finanzas">
+         💼 Finanzas
+        </option>
+        <option value="rrhh">
+         👥 RRHH
+        </option>
+        <option value="otro">
+         🔧 Otro
+        </option>
+       </select>
+      </div>
+      <div class="form-group">
+       <label>
+        Prompt
+       </label>
+       <textarea id="new-prompt-text" placeholder="Escribe tu prompt aquí..." rows="6"></textarea>
+      </div>
+      <button class="btn" onclick="guardarNuevoPrompt()">
+       💾 Guardar Prompt
+      </button>
+     </div>
+     <div>
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+       <h4 style="color: #c4b5fd; margin: 0;">
+        📚 Tus Prompts Guardados
+       </h4>
+       <div style="display: flex; gap: 0.5rem;">
+        <button class="btn btn-secondary" onclick="descargarPromptsTXT()" style="padding: 0.75rem 1.5rem;">
+         📄 Descargar TXT
+        </button>
+        <button class="btn btn-secondary" onclick="descargarPromptsExcel()" style="padding: 0.75rem 1.5rem;">
+         📊 Descargar Excel
+        </button>
+       </div>
+      </div>
+      <div id="saved-prompts-list">
+      </div>
+     </div>
+    </div>
+   </div>
+   <div class="tab-content" id="tab-diccionario">
+    <div class="section-card">
+     <h3>
+      Diccionario de IA para Profesionales 2026
+     </h3>
+     <p style="color: #ccc; margin-bottom: 2rem;">
+      Domina el vocabulario esencial que todo profesional de alto impacto debe conocer en 2026.
+      <strong>
+       40 términos
+      </strong>
+      desde fundamentos hasta conceptos avanzados como Agentes de IA, Fine-tuning y Embeddings.
+     </p>
+     <div class="grid-2" id="diccionario-container">
+     </div>
+    </div>
+   </div>
+  </div>
+  <!-- TAB: Prácticas -->
+  <!-- TAB: RICO Framework -->
+  <!-- TAB: GPTs Premium -->
+  <!-- TAB: Prompts Profesionales -->
+  <!-- TAB: Mis Prompts -->
+  <div class="toast" id="toast">
+  </div>
+  <script src="scripts.js">
+  </script>
+  <!-- Modal Editar Prompt -->
+  <div id="editModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.7); z-index:10000; justify-content:center; align-items:center; backdrop-filter:blur(4px);">
+   <div style="background:#1a1333; border:1px solid #584ec8; border-radius:1rem; padding:2rem; width:90%; max-width:600px; max-height:90vh; overflow-y:auto; position:relative;">
+    <button onclick="cerrarModalEditar()" style="position:absolute; top:1rem; right:1rem; background:none; border:none; color:#999; font-size:1.5rem; cursor:pointer;">
+     ×
+    </button>
+    <h3 style="color:#c4b5fd; margin-bottom:1.5rem;">
+     ✏️ Editar Prompt
+    </h3>
+    <input id="edit-prompt-id" type="hidden"/>
+    <div class="form-group">
+     <label>
+      Título
+     </label>
+     <input id="edit-prompt-title" placeholder="Título del prompt" type="text"/>
+    </div>
+    <div class="form-group">
+     <label>
+      Categoría
+     </label>
+     <select id="edit-prompt-category">
+      <option value="direccion">
+       📊 Dirección
+      </option>
+      <option value="ventas">
+       💰 Ventas
+      </option>
+      <option value="marketing">
+       📢 Marketing
+      </option>
+      <option value="operaciones">
+       ⚙️ Operaciones
+      </option>
+      <option value="producto">
+       📦 Producto
+      </option>
+      <option value="finanzas">
+       💼 Finanzas
+      </option>
+      <option value="rrhh">
+       👥 RRHH
+      </option>
+      <option value="otro">
+       🔧 Otro
+      </option>
+     </select>
+    </div>
+    <div class="form-group">
+     <label>
+      Prompt
+     </label>
+     <textarea id="edit-prompt-text" placeholder="Escribe tu prompt aquí..." rows="8"></textarea>
+    </div>
+    <div style="display:flex; gap:0.5rem; justify-content:flex-end;">
+     <button class="btn btn-secondary" onclick="cerrarModalEditar()" style="padding:0.75rem 1.5rem;">
+      Cancelar
+     </button>
+     <button class="btn" onclick="guardarEdicion()" style="padding:0.75rem 1.5rem;">
+      💾 Guardar Cambios
+     </button>
+    </div>
+   </div>
+  </div>
+  <!-- Scroll to Top Button -->
+  <div class="scroll-to-top" id="scrollToTop" title="Volver arriba">
+   <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M12 4l-8 8h5v8h6v-8h5z">
+    </path>
+   </svg>
+  </div>
+ </body>
+</html>
